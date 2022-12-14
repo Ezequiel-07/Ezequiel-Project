@@ -1,0 +1,184 @@
+.solid{
+    width: 100vw;
+    height: 8vh;
+    background: #00000088;
+    position: fixed;
+    z-index: 7000;
+}
+nav{
+    width: 100vw;
+    height: 8vh;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: fixed;
+    z-index: 8000;
+}
+.tittle{
+    width: auto;
+    height: 100%;
+    position: relative;
+    .img{
+        width: 100%;
+        height: 100%;
+    }
+    .img img{
+        height: 100%;
+        width: auto;
+    }
+}
+label.menu{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .5rem;
+    border-radius: 100rem;
+    background: linear-gradient(45deg, #ffffff2f 50%, #ffffff3d 50%);
+    cursor: pointer;
+    transition: all 1s ease;
+    img{
+        width: 100%;
+    }
+    &:hover{
+        transform: scale(1.1);
+    }
+    display: none;
+}
+.buttons{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.projects{
+    width: 18%;
+    height: 42%;
+    position: relative;
+    a{
+        backdrop-filter: blur(.5rem);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #ffffff2f 50%, #ffffff3d 50%);
+        border-radius: 100rem;
+        text-decoration: none;
+        color: #ffffff;
+        transition: all 1s ease;
+        &:hover{
+            transform: scaleX(1.1);
+            letter-spacing: -.05rem;
+        }
+    }
+}
+
+.appearance{
+    width: 25%;
+    height: 50%;
+    position: relative;
+    border-radius: 100rem;
+    overflow: hidden;
+    label{
+        backdrop-filter: blur(.5rem);
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 100rem;
+        background: linear-gradient(45deg, #ffffff2f 50%, #ffffff3d 50%);
+        color: #ffffff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all ease 1s;
+        position: absolute;
+        z-index: 1000;
+        &:hover{
+            letter-spacing: .1vw;
+        }
+    }
+    &:hover span{
+        width: 80%;
+        height: 80%;
+    }
+    span{
+        content: "";
+        position: absolute;
+        width: 30%;
+        height: 80%;
+        border-radius: 100rem;
+        background: #ff0000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all ease .7s;
+        box-shadow: 0 0 .7rem 0 #9500cf, 0 0 .7rem 0 #8a00c0, 0 0 .7rem 0 #7500a3;
+    }
+}
+.container{
+    width: 70vw;
+    height: 70vh;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    position: absolute;
+    z-index: 8000;
+    transition: left ease 1s;
+    backdrop-filter: blur(.5rem);
+    background: linear-gradient(45deg, #ffffff2f 50%, #ffffff3d 50%);
+    border-radius: 2.5em;
+    animation: appear 1s ease;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1350px) {
+    .buttons{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 850px) {
+    .buttons{
+        position: absolute !important;
+        width: 100vw !important;
+        height: 50vh !important;
+        background: #00000088 !important;
+        top: -55vh;
+        left: 0 !important;
+        flex-wrap: wrap !important;
+        align-content: space-evenly !important;
+        transition: all 1s ease;
+        .projects{
+            width: 90% !important;
+            height: 15% !important;
+        }
+        .appearance{
+            width: 90% !important;
+            height: 15% !important;
+            &:hover span{
+                width: 130% !important;
+                height: 130% !important;
+            }
+        }
+        label.btn-close{
+            display: flex !important;
+            justify-content: center;
+            align-content: center;
+            color: #ffffff;
+            font-size: 1.5rem;
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            border-radius: 0 0 100rem 100rem;
+            background: linear-gradient(45deg, #ffffff2f 50%, #ffffff3d 50%);
+            cursor: pointer;
+            transition: all 1s ease;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .menu{
+        display: block !important;
+    }
+    #buttons:valid + .buttons{
+        top: 0% !important;
+    }
+}

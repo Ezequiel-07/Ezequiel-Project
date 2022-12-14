@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="projects">
+        <div class="tittle"><div class="wh"><div class="effect"><h2>Proyectos</h2></div></div></div>
+        <div class="project" [ngStyle]="{'background':style.iframe_color}" (click)="appearIframe('https://hades-app.vercel.app/signin');">
+            <div class="hades"><img src="assets/Hades-logo.svg" alt=""></div>
+        </div>
+        <div class="project" [ngStyle]="{'background':style.iframe_color}" (click)="appearIframe('https://apolo-messages.vercel.app/chat')">
+            <div class="apolo"><img src="assets/Apolo-logo.svg" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<div class="preview" *ngIf="src != ''" [ngStyle]="{'animation':animation}">
+    <div class="close">
+        <div class="icon" (click)="close()"><img src="assets/close-icon.svg"></div>
+    </div>
+    <div class="box">
+        <iframe [src]="this.src | safe " frameborder="0"></iframe>
+    </div>
+</div>
+
+<footer>
+    <app-contact></app-contact>
+</footer>

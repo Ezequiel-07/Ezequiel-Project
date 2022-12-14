@@ -1,0 +1,101 @@
+@use 'animation';
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+.container{
+    width: 100%;
+    height: 100%;
+    background: #CF10FF;
+    transition: background 1s ease;
+    position: relative;
+    z-index: 7500;
+}
+.circles{
+    width: 80%;
+    height: 100%;
+    left: 20%;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    img{
+        height: 105%;
+        width: 100%;
+    }
+}
+.presentation{
+    width: 40%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    .tittle-container{
+        width: 80%;
+        height: 30%;
+        .tittle{
+            font-size: 3.5rem;
+            font-family: 'Concert One', cursive;
+            color: #ffffff;
+        }
+        .typing{
+            width: max-content;
+            height: max-content;
+            display: flex;
+            position: absolute;
+            color: #20ffc1;
+            &::after{
+                content: 'JAVACRIPT';
+                font-size: 3.6rem;
+                font-family: 'Concert One', cursive;
+                overflow: hidden;
+                border-right: .6rem #ffffff solid;
+                animation: animation 10s step-end infinite, typing 2.5s infinite steps(30);
+            }
+        }
+    }
+}
+.img-container{
+    width: 60%;
+    height: 100%;
+    top: 0;
+    left: 40%;
+    position: absolute;
+    .img{
+        width: 100%;
+        height: 70%;
+        top: 15%;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .tittle{
+        font-size: 3rem !important;
+    }
+    .typing::after{
+        font-size: 3rem !important;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .tittle{
+        font-size: 2.7rem !important;
+    }
+    .typing::after{
+        font-size: 2.7rem !important;
+    }
+}
+@media screen and (max-width: 800px) {
+    .circles{
+        left: 0 !important;
+        width: 100% !important;
+    }
+    .presentation{
+        width: 100%;
+        height: 40%;
+        .tittle{
+            width: 80%;
+        }
+    }
+    .img-container{
+        width: 100%;
+        height: 60%;
+        top: 40%;
+        left: 0;
+    }
+}

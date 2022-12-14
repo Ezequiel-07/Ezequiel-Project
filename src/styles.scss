@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    overflow: hidden;
+    background: #000000;
+}
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.flex-center{
+    @include flex-center();
+}
+.img{
+    @include flex-center();
+    img{
+        width: 100%;
+    }
+}

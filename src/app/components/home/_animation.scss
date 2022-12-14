@@ -1,0 +1,22 @@
+@keyframes animation {
+    0%{
+        content: 'WEBSOCKETS';
+    }
+    25%{
+        content: 'TYPESCRIPT';
+    }
+    50%{
+        content: 'NODEJS';
+    }
+    75%{
+        content: 'ANGULAR';
+    }
+}
+@keyframes typing {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 150%;
+    }
+}

@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="presentation" [ngStyle]="{'border-color':style.letter_color}">
+        <div class="objects">
+            <!-- Quien Soy -->
+            <div class="object">
+                <div class="tittle">
+                    <h2 [ngStyle]="{'color':style.letter_color}">¿Quién soy?</h2>
+                </div>
+                <div class="body">
+                    <p [ngStyle]="{'color':style.letter_color}">Soy un programador del ámbito de desarrollo web que se especializa en el lenguaje de JavaScript.</p>
+                </div>
+            </div>
+            <!-- Se Usar -->
+            <div class="object">
+                <div class="tittle">
+                    <h2 [ngStyle]="{'color':style.letter_color}" >Se usar</h2>
+                </div>
+                <div class="body">
+                    <p [ngStyle]="{'color':style.letter_color}" >Aplico tecnologías como la IA mediante tensores, las RestAPI, los Web Sockets, programación reactiva y orientada a objectos, entre otras.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="abilities">
+        <div class="container-objects">
+            <div class="DO">
+                <h2 [ngStyle]="{'color':style.letter_color}" >¿Qué hago?</h2>
+            </div>
+            <div class="objects">
+                <div class="object" *ngFor="let item of objects">
+                    <div class="tittle">
+                        <h2 [ngStyle]="{'color':style.letter_color}" >{{item.tittle}}</h2>
+                    </div>
+                    <div class="body">
+                        <p [ngStyle]="{'color':style.letter_color}" >{{item.body}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

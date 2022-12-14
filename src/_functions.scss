@@ -1,0 +1,8 @@
+@function selectColor($colorSelected){
+    $color: to-lower-case($colorSelected);
+
+    @if $color == 'white' {
+        @return #ffffff
+    };
+    @return $color;
+}

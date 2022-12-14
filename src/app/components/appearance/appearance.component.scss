@@ -1,0 +1,44 @@
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 1% 4%;
+}
+.background-selectors{
+    width: 100%;
+    height: max-content;
+}
+.color-selectors{
+    width: 100%;
+    height: max-content;
+}
+button{
+    width: 4.5rem;
+    height: 4.5rem;
+    border: none;
+    border-radius: 100%;
+    margin-right: .7rem;
+    cursor: pointer;
+
+    &.black{
+        background: #040404;
+    }
+    &.white{
+        background: #ffffff;
+    }
+    &.red{
+        background: #9626D1;
+    }
+    &.blue{
+        background: #00BFBC;
+    }
+    &.green{
+        background: #00BF00;
+    }
+}
+.selector{
+    width: 100%;
+    height: auto;
+    padding: 2% 0%;
+    color: #ffffff;
+
+}

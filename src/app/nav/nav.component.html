@@ -1,0 +1,27 @@
+<div class="solid"></div>
+<nav>
+    <div class="tittle">
+        <div class="img"><img src="assets/E&M.png" alt="E&M"></div>
+    </div>
+    <label for="buttons" class="menu"><img src="assets/hamburger-menu.svg"></label>
+    <input type="checkbox" id="buttons" required style="display: none;">
+    <div class="buttons flex-center">
+        <div class="projects">
+            <a class="flex-center" href="home#home">Home</a>
+        </div>
+        <div class="projects">
+            <a class="flex-center" href="home#me">About me</a>
+        </div>
+        <div class="projects">
+            <a class="flex-center" href="home#projects">Projects</a>
+        </div>
+        <div class="appearance">
+            <span [ngStyle]="{'background':styleData.color, 'box-shadow':styleData.shadow}"></span>
+            <label class="flex-center" (click)="appearance()">Appearance</label>
+        </div>
+        <label class="btn-close" for="buttons" style="display: none;">x</label>
+    </div>
+</nav>
+<div class="container" *ngIf="status == true" [ngStyle]="{'animation': animation}">
+    <app-appearance [background]="styleData.nav"></app-appearance>
+</div>

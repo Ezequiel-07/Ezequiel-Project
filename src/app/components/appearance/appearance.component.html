@@ -1,0 +1,13 @@
+<div class="container" [ngStyle]="{'background': background}">
+    <div class="background-selectors">
+        <h3 class="selector">Color Background</h3>
+        <button class="white" (click)="selectBackground($event)"></button>
+        <button class="black" (click)="selectBackground($event)"></button>
+    </div>
+    <div class="color-selectors">
+        <h3 class="selector">Color Selectors</h3>
+        <button class="red" (click)="selectColor($event)"></button>
+        <button class="blue" (click)="selectColor($event)"></button>
+        <button class="green" (click)="selectColor($event)"></button>
+    </div>
+</div>

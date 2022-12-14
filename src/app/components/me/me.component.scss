@@ -1,0 +1,107 @@
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+@mixin text ($font-size) {
+    text-align: center;
+    color: #ffffff;
+    font-size: $font-size;
+}
+@mixin object ($width, $heigth, $ht, $h2, $p) {
+    @include flex-center;
+    width: $width;
+    height: $heigth;
+    .tittle{
+        width: 100%;
+        height: $ht;
+        h2{
+            @include text($h2)
+        }
+    }
+    .body{
+        width: 100%;
+        height: auto;
+        p{
+            @include text($p)
+        }
+    }
+}
+.container{
+    @include flex-center;
+    width: 100%;
+    height: 100%;
+}
+.presentation{
+    @include flex-center;
+    width: 36%;
+    height: 80%;
+    border-right: .2rem #ffffff solid;
+    .objects{
+        @include flex-center;
+        width: 80%;
+        height: 100%;
+        align-content: space-around;
+        .object{
+            @include object(65%, auto, auto, 2.5rem, 1.5rem);
+        }
+    }
+}
+.abilities{
+    @include flex-center;
+    width: 58%;
+    height: 80%;
+    align-content: space-around;
+    .container-objects{
+        @include flex-center;
+        width: 85%;
+        height: 80%;
+        flex-wrap: wrap;
+        .DO{
+            padding: 2.3%;
+            width: 100%;
+            height: 20%;
+            h2{
+                @include text(2.5rem)
+            }
+        }
+        .objects{
+            @include flex-center();
+            width: 90%;
+            height: 80%;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .object{
+                @include object(40%, 45%, 20%, 1.6rem, 1rem);
+                align-content: flex-start;
+                .tittle{
+                    margin-bottom: 2%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1150px) {
+    .presentation{
+        display: none;
+    }
+    .abilities{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .abilities{
+        .objects{
+            width: 100% !important;
+            height: 100% !important;
+            .object{
+                width: 100% !important;
+                height: 25% !important;
+            }
+        }
+    }
+}
